@@ -36,7 +36,6 @@ async function getCurveFromName(name) {
     }
 }
 
-
 async function groth16SolidityVerifier(verificationKey, logger) {
     const template = await fs__default["default"].promises.readFile(path__default["default"].join(__dirname$1, "templates", "verifier_groth16.sol.ejs"), "utf8");
     return ejs__default["default"].render(template, verificationKey);
@@ -137,12 +136,12 @@ async function plonkSolidityCallData(_proof, _pub, logger) {
     `${p256(proof.T3[0])},${p256(proof.T3[1])},` +
     `${p256(proof.Wxi[0])},${p256(proof.Wxi[1])},` +
     `${p256(proof.Wxiw[0])},${p256(proof.Wxiw[1])},` +
-    `${p256(proof.eval_a)},` + 
-    `${p256(proof.eval_b)},` + 
-    `${p256(proof.eval_c)},` + 
-    `${p256(proof.eval_s1)},` + 
-    `${p256(proof.eval_s2)},` + 
-    `${p256(proof.eval_zw)}]` + 
+    `${p256(proof.eval_a)},` +
+    `${p256(proof.eval_b)},` +
+    `${p256(proof.eval_c)},` +
+    `${p256(proof.eval_s1)},` +
+    `${p256(proof.eval_s2)},` +
+    `${p256(proof.eval_zw)}]` +
     `[${inputs}]`;
 }
 
