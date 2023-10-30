@@ -1,0 +1,55 @@
+{
+  "name": "snarkjs-generate-solidity",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Solidity generators for SnarkJS",
+  "main": "./main.cjs",
+  "module": "./main.js",
+  "exports": {
+    "import": "./main.js",
+    "require": "./main.cjs"
+  },
+  "files": [
+    "main.cjs",
+    "main.js",
+    "templates/",
+    "COPYING",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run -w hardhat-tests test",
+    "build": "rollup -c rollup.cjs.config.js"
+  },
+  "directories": {
+    "templates": "templates"
+  },
+  "keywords": [
+    "zksnark",
+    "solidity",
+    "ethereum",
+    "zero",
+    "knowledge",
+    "cryptography",
+    "circuit",
+    "snarkjs",
+    "generate"
+  ],
+  "author": "Jordi Baylina",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iden3/snarkjs-generate-solidity.git"
+  },
+  "workspaces": [
+    "hardhat-tests"
+  ],
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "ffjavascript": "0.2.62"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "mocha": "^10.0.0",
+    "rollup": "^2.38.5"
+  }
+}
